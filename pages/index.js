@@ -17,16 +17,19 @@ export default function Home () {
             </div>
             <style jsx>{`
                 img {
-										height: 30%;
-										width: 30%;
+					height: 30%;
+					width: 30%;
                 }
                 .author__container {
                     position: fixed;
                     bottom: 5%;
                     width: calc(100% - 2 * ${typography.rhythm(2)});
                     height: 100%;
-                    z-index: -1;
                     clip-path: polygon(0 39%, 100% 19%, 100% 82%, 0 100%);
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
                     background-color: #FBAB7E;
 										background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 										display: flex;
@@ -35,15 +38,23 @@ export default function Home () {
 										align-items: center;
                 }
                 article {
-										margin: ${typography.rhythm(7)} auto;
-										margin-left: 1rem;
-								}
-								img {
-									margin-right: 1rem;
-								}
+					margin: ${typography.rhythm(7)} auto;
+				}
                 .author__elevatorPitch {
                     font-family: 'Just Another Hand', cursive;
                     font-weight: normal;
+                }
+
+                @media screen and (max-width: 600px) {
+                    .author__container {
+                        flex-flow: column wrap; 
+                    }
+                    img {
+                        display: none;
+                    }
+                    article {
+                        margin: auto;
+                    }
                 }
             `}</style>
         </Layout>
