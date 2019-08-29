@@ -22,10 +22,17 @@ export default function Header (props) {
             <style jsx>{`
                 header {
                     height: ${typography.rhythm(2.26)};
+                    box-shadow: ${theme.muted} 1px 1px 2px;
                 }
                 .logo a {
                     font-size: ${typography.rhythm(1.16)};
                     color: ${theme.secondary};
+                }
+                @media screen and (max-width: 600px) {
+                    header {
+                        height: ${typography.rhythm(4.854)};
+                        max-height: calc(${typography.rhythm(1.16)} );
+                    }
                 }
             `}</style>
             <style jsx>{`
@@ -35,7 +42,6 @@ export default function Header (props) {
                     justify-content: space-between;
                     align-items: center;
                     position: sticky;
-                    box-shadow: ${theme.muted} 1px 1px 2px;
                     width: 100%;
                     margin: 0;
                     padding: 0;
@@ -59,6 +65,10 @@ export default function Header (props) {
                 @media screen and (max-width: 600px) {
                     header {
                         flex-flow: column;
+                        justify-content: flex-start;
+                    }
+                    header > section, header > Navbar, header > nav {
+                        flex:1;
                     }
                 }
             `}</style>
