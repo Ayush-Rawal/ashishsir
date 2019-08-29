@@ -56,6 +56,11 @@ export default function Header (props) {
                     text-shadow: none;
                     background-image: none;
                 }
+                @media screen and (max-width: 600px) {
+                    header {
+                        flex-flow: column;
+                    }
+                }
             `}</style>
         </header>
     )

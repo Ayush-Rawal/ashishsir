@@ -28,6 +28,14 @@ export default function Navbar (props) {
                 max-width: 66vw;
                 max-height: 100%;
             }
+            @media screen and (max-width: 600px) {
+                .nav__container {
+                    
+                }
+                a {
+                    margin: auto 0.4em;
+                }
+            }
             `}</style>
         </nav>
     )
