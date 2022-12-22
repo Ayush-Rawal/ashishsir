@@ -21,7 +21,7 @@
   "author": "Ayush Rawal",
   "license": "MIT",
   "dependencies": {
-    "next": "^9.3.2",
+    "next": "^9.5.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-typography": "^0.16.19",
